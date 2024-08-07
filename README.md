@@ -6,6 +6,7 @@ Library Editer By @bysuskhmer
 
 ```lua
 local Library = loadstring(game:HttpGet("https://github.com/UhGbaaaa/X-Mobile-/raw/main/Kavo%20V2.txt"))()
+local NotifyLib = loadstring(game:HttpGet("https://github.com/UhGbaaaa/Library-/raw/main/Notification"))()
 ```
 
 ## Creating UI Library Window
@@ -206,4 +207,44 @@ end
 
 ```lua
 Library:ToggleUI()
+```
+
+## Make Toggle Moblie 
+
+```lua
+local ToggleGui = Instance.new("ScreenGui")
+local Toggle = Instance.new("ImageButton")
+
+ToggleGui.Name = "ToggleGui_HE"
+ToggleGui.Parent = game.CoreGui
+
+Toggle.Name = "Toggle"
+Toggle.Parent = ToggleGui
+Toggle.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Toggle.BackgroundTransparency = 0.660
+Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle.Size = UDim2.new(0.05,0,0.114,0)
+Toggle.Image = "rbxassetid://18632913166"
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+```
+
+## Notification Make 
+
+```lua
+NotifyLib.prompt('Made by', 'Bysuskhmer ', 4)
+```
+
+## Player WalkSpeed
+
+```lua
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = 100
+```
+
+## Player Jump Power 
+
+```lua
+game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = 100
 ```
